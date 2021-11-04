@@ -27,10 +27,12 @@ body %}
         </div>
       </div>
       <AmpContent>
+      {% if app.user == null %}
       <a href="{{ path('app_login') }}" class="btn btn-info">
         You need to login to see the list 😜😜 >></a
 
       >
+      {% endif %}
       {{dump(app.user)}}
       
 </NonAmpContent>
