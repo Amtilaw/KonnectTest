@@ -12,12 +12,14 @@ body %}
               <th>Company Name</th>
               <th>Market Value</th>
             </tr>
+            {% if app.user != null %}
             {% for key, item in companies %}
             <tr>
               <td>{{ key }}</td>
               <td>{{ item }}</td>
             </tr>
             {% endfor %}
+            {% endif %}
           </table>
           
 </NonAmpContent>
@@ -26,7 +28,9 @@ body %}
       <AmpContent>
       <a href="{{ path('app_login') }}" class="btn btn-info">
         You need to login to see the list 😜😜 >></a
+
       >
+      {{dump(app.user)}}
       
 </NonAmpContent>
     </div>
