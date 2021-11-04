@@ -12,6 +12,7 @@ body %}
               <th>Company Name</th>
               <th>Market Value</th>
             </tr>
+            <!-- Regarde si il y a bien un utilisateur connecte -->
             {% if app.user != null %}
             {% for key, item in companies %}
             <tr>
